@@ -74,7 +74,7 @@ def handle_message(event):
             turned='off'
         return "{coll} has been turned {turn}".format(coll=col,turn=turned)
 
-    mess_to_send = "{col} has been turned {turn}".format(color,on_off)
+    mess_to_send = "{coll} has been turned {turn}".format(coll=color,turn=on_off)
     if donthavepinflag==1:
         message=TextSendMessage(text="There is no such Color,ERROR!")
     else:

@@ -9,7 +9,7 @@ from linebot.exceptions import (
 from linebot.models import *
 
 from tan_token import *
-from initsetup import *
+#from initsetup import *
 
 import json
 import requests
@@ -37,13 +37,14 @@ def callback():
         abort(400)
     return 'OK'
 
-# pin_num=5
-# on_off=0
-# color="\color/"
+
 
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    pin_num=5
+    on_off=0
+    color="\color/"
     if event.message.text[0]=='R':
         color = 'RED'
         pin_num=12

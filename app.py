@@ -8,7 +8,7 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-from RGBlight.tan_token import *
+from tan_token import *
 
 import json
 import requests

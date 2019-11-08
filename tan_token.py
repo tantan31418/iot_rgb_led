@@ -1,0 +1,4 @@
+CHANNEL_SECRET = '''9ad615188fee2834234d9b1e8247cc7f'''
+CHANNEL_ACCESS_TOKEN = '''S8WiLex51KLGvyleX7GUisoO9zagvAbs0fVe/ib4iGV7ebjI1MwRZEnsoOecpKecmTWsY1GUFAi8o3MTFgoxfy/32JDEmdQb6cgXLBa0i+ext/nGlArhJV9q9cEWALLBMbfHTL3M++sb6+M9M8I0bgdB04t89/1O/w1cDnyilFU='''
+
+dorm_id = 'ren415ren'

@@ -46,23 +46,30 @@ def handle_message(event):
     on_off=0
     color="\color/"
     donthavepinflag=0
+    # you have to fix bug: if input = R then event.mess.text[1]would be out of range
+    #shoud write a fallback function
+    #bug:pinnumiswrong == fixed
+    #bug:only red has color name == fixed
     if event.message.text[0]=='R':
         color = 'RED'
-        pin_num=12
+        pin_num=5
         if event.message.text[1] == '1':
             on_off=1
     elif event.message.text[0]=='B':
+        color = 'BLUE'
         pin_num=13
         if event.message.text[1] == '1':
             on_off=1
     elif event.message.text[0]=='G':
-        pin_num=5
+        color = 'GREEN'
+        pin_num=12
         if event.message.text[1] == '1':
             on_off=1
     else :
         donthavepinflag=1
         pin_num=5
         on_off=1
+        #should turn off the light after warning
         requests.get('https://cloud.arest.io/{dorm}/digital/5/0')
         requests.get('https://cloud.arest.io/{dorm}/digital/12/0')
         requests.get('https://cloud.arest.io/{dorm}/digital/13/0')

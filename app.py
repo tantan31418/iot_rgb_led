@@ -45,6 +45,7 @@ def handle_message(event):
     pin_num=5
     on_off=0
     color="\color/"
+    donthavepinflag=0
     if event.message.text[0]=='R':
         color = 'RED'
         pin_num=12

@@ -70,9 +70,10 @@ def handle_message(event):
         pin_num=5
         on_off=1
         #should turn off the light after warning
-        requests.get('https://cloud.arest.io/{dorm}/digital/5/0')
-        requests.get('https://cloud.arest.io/{dorm}/digital/12/0')
-        requests.get('https://cloud.arest.io/{dorm}/digital/13/0')
+        #bug:would not turn off the previous lights as desired
+        r0=requests.get('https://cloud.arest.io/{dorm}/digital/5/0')
+        r0=requests.get('https://cloud.arest.io/{dorm}/digital/12/0')
+        r0=requests.get('https://cloud.arest.io/{dorm}/digital/13/0')
     r = requests.get('https://cloud.arest.io/{dorm}/digital/{pin}/{turn}'.format(dorm=dorm_id,pin=pin_num,turn=on_off))
     data = json.loads(r.content)
     def send_message_content(col,onoff):
